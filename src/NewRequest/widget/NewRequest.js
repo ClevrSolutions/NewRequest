@@ -1,9 +1,12 @@
-dojo.provide("NewRequest.widget.NewRequest");
+define([
+	"dojo/_base/declare",
+	"mxui/widget/_WidgetBase",
+	"dojo/_base/lang",
+	"dojo/_base/kernel"
+], function (declare, _WidgetBase, lang, kernel) {
+	'use strict';
 
-mendix.dom.insertCss(mx.moduleUrl("NewRequest", "widget/styles/NewRequest.css"));
-
-mendix.widget.declare('NewRequest.widget.NewRequest', {
-	addons       : [],
+	return declare("NewRequest.widget.NewRequest", [ _WidgetBase ], {
 	inputargs: {
     url :       '',
 	caption :   '',
@@ -18,8 +21,8 @@ mendix.widget.declare('NewRequest.widget.NewRequest', {
 	
 	resetCaption:function(){
 		                //system needs some time to set the locale when changing users, so timeout is needed
-		setTimeout(dojo.hitch(this, function () {
-            var code = mx.ui.getLocale();
+		setTimeout(lang.hitch(this, function () {
+            var code = kernel.locale;
             var caption = this.caption;
             this.domNode.title = caption;
         }), 1000);
@@ -32,12 +35,15 @@ mendix.widget.declare('NewRequest.widget.NewRequest', {
 		this.connect(mx.session, "startup", "resetCaption");
         this.connect(mx.session, "restart", "resetCaption");
 		this.domNode.title = this.caption;
-		this.connect(this.domNode, 'onclick', dojo.hitch(this, this.execaction));
-		mx.addOnLoad(dojo.hitch(this, this.resetCaption)); 
-		this.actRendered();
+		this.connect(this.domNode, 'onclick', lang .hitch(this, this.execaction));
+		mx.addOnLoad(lang.hitch(this, this.resetCaption)); 
+		// this.actRendered();
 	},	
 	
 	uninitialize : function(){
 		logger.debug(this.id + ".uninitialize");
 	}
-});
+		});
+	});
+
+require([ "NewRequest/widget/NewRequest" ]);
