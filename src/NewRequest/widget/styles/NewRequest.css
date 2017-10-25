@@ -1,0 +1,10 @@
+.NewRequest{
+background-image: url("newRequest.png");
+background-repeat: no-repeat;
+cursor: pointer;
+height: 16px;
+width: 23px;
+margin-top: 4px;
+float: right;
+margin-right: 5px;
+}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<widget id="NewRequest.widget.NewRequest" needsEntityContext="false" xmlns="http://www.mendix.com/widget/1.0/">
+  <name>New Request</name>
+  <description>New Request trigger</description>
+
+  <icon>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJ
+bWFnZVJlYWR5ccllPAAAAkRJREFUeNqUUk1rU0EUPfPeS3wvn4UkJrWxBkpImypFeQtJDFHciCAU
+slR04Z+wQla6VAT/gC5cGF24cWlEKK1uolGLiBAaY2ulH6FN4vvI+3Im2JKUWPXAMHeYe849984Q
+x3GwH69vkb2Y4wXYln3RO3qq6I1OT+vbX+utxsJtEDw5fbMLAUPgiaT3YrVZPxc7OfvsiJx1E2sd
+upo8sROffLyy+IBVfkqGOejH59KlF0flifNu1zK+VWowVBGjM2msVD5+SF99NzPUQbvxqrc7lgmO
+qHGBb8HUNBzyinBsHZyzCp5vJVjOUIG3Dy+DGbO7OmKTSUoyYNE4OBbACCx6tmAonU8slxSLRTfH
+cTKNJ+iSdkUIHJINf7kun4HsFn/QI0dFflIyh43amlld8s+9t2fvC5ZlyZlM5lo+ny9IkhTqWXds
+1Mp3EImY8MXGsVmPQNlo0AsPTN1CYOqG4vW5k9b8vCx0u91kLpcruFyukGmaverLL+8icrgCaUTC
+9voYdtaWkLjwCJwg7hoM5BJ6oVwuLwqapnn6yQymXkfw2BR0LY5m7Q1i2TnY4GH35TAO4zIBQttA
+vwCdEL7TEVnOJoLHr4CIMRiGOTBoQRDAuEyAMwxjQCB69t5AMrvfD/Z/GFdQFKXnYFjSQSCEgHEF
+VVW1dru9RZ8y9D8Cuq5vMS4fDof9tLo3lUqN02eUeJ7H3xYlNkul0vNqtVomdJpRn8+XoRdxakv8
+l+q0f422vdrpdBbI79/n/9O3PgBs6u1fAgwA4iIQHDyyWDkAAAAASUVORK5CYII=</icon>
+
+   <properties>
+    <property key="url" type="string" required="true">
+      <caption>URL</caption>
+      <category>Behavior</category>
+      <description>URL to open with microflow trigger (from root / )</description>
+    </property>
+    <property key="caption" type="translatableString" required="true">
+      <caption>Caption</caption>
+      <category>Behavior</category>
+      <description>The caption of the microflow trigger</description>
+    </property>
+  </properties>
+</widget>
+
