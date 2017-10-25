@@ -7,10 +7,8 @@ define([
 	'use strict';
 
 	return declare("NewRequest.widget.NewRequest", [ _WidgetBase ], {
-	inputargs: {
     url :       '',
 	caption :   '',
-	},
 	
 	domNode: null,
 		
